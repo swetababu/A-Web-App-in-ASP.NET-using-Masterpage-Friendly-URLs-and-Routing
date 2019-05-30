@@ -1,0 +1,109 @@
+﻿<%-- 
+    Assignment 11
+    Purpose - SQL Data Source with GridView Control
+    Created By - Sweta Saurabh Gupta (8252397)
+    Date Created - 6th July 2018
+--%>
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Assignment_SportsPro.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>SportsPro Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <link href="Content/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   
+    <form id="form1" runat="server" class="form-horizontal">
+
+        <!-- Navigation starts -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <!-- mobile toggle starts -->
+            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+              <!-- mobile toggle ends -->
+            <a class="navbar-brand" href="/Default">SportsPro</a> <!-- Logo (brand) of SportsPro --> <!-- used friendly URL -->
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="dropdown"> <!-- dropdown menu -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer Support <span class="caret"></span></a>
+                <ul class="dropdown-menu p-2">
+                  <li><a href="/CustomerSupport/RegisterProducts">Register Products</a></li> <!-- used friendly URL -->
+                  <li><a href="/CustomerSupport/CustomerSurvey">Complete Customer Survey</a></li> <!-- used friendly URL -->
+                </ul>
+              </li>
+
+                <li class="dropdown"> <!-- dropdown menu -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Technician Support <span class="caret"></span></a>
+                <ul class="dropdown-menu p-2">
+                  <li><a href="/TechSupport/CustomerIncidentDisplay">Display Customer Incidents</a></li> <!-- used friendly URL -->
+                  <li><a href="/TechSupport/UpdateIncidents">Update Incidents</a></li> <!-- used friendly URL -->
+                </ul>
+              </li>
+
+                <li class="dropdown"> <!-- dropdown menu -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration <span class="caret"></span></a>
+                <ul class="dropdown-menu p-2">
+                    <li><a href="/Administration/ProductMaintenance">Maintain Products </a></li> <!-- used friendly URL -->
+                    <li><a href="/Administration/CustomerMaintenance">Maintain Customers </a></li> <!-- used friendly URL -->
+                    <li><a href="/Administration/TechnicianMaintenance">Maintain Technicians </a></li> <!-- used friendly URL -->
+                    <li><a href="/Administration/IncidentDisplay">Display Incidents </a></li> <!-- used friendly URL -->
+                    <li><a href="/Administration/CustomerDisplay">Display Customers </a></li> <!-- used friendly URL -->
+                    <li><a href="/Administration/TechnicianIncidentSummary">Display Incidents By Technician </a></li> <!-- used friendly URL -->
+                </ul>
+              </li>
+
+                <li><a href="/ContactUs">Contact Us</a></li> <!-- used friendly URL -->
+             
+            </ul>
+            
+          </div><!-- navbar ends -->
+        </div><!-- container-fluid ends-->
+      </nav>
+        <!-- navigation ends -->
+        
+
+        <br />
+
+
+        <header class="jumbotron container">
+            <h1>SportsPro</h1>
+            <h2>Sports management software for the sports enthusiast</h2>
+        </header>
+
+       
+        <div class="container">
+
+            <main class="container">
+                <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        </div>
+
+        <footer class="container">
+            <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
+                <div class="row bg-light col-md-12">
+                    <p class="pt-3 pl-3">
+                        To contact us, call us at 800-555-0400 or email us at <a href="mailto:sportspro@sportsprosoftware.com" class="text-info font-weight-bold">sportspro@sportsprosoftware.com</a>
+                    </p>
+                </div>
+                
+            </asp:ContentPlaceHolder>
+        </footer>
+
+    </form>
+
+</body>
+</html>

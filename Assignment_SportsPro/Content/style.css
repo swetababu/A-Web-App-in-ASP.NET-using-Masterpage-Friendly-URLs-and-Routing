@@ -1,0 +1,10 @@
+﻿/* Styles needed for ProductList Label and DataList */
+#lblCategory {
+    text-align: left;
+}
+
+.bg-sportspro {
+    background-color: #8c8c8c;
+    color: white;
+    font-weight: bold;
+}
